@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+:root{
+    --orange: hsl(31, 77%, 52%);
+    --cyan:hsl(184, 100%, 22%);
+    --dark-cyan:hsl(179, 100%, 13%);
+}
+
+body{
+    margin:20em 0;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.content{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.square__sedan, .square__suv, .square__luxury{
+    box-sizing: border-box;
+    width:85vw;
+    display:flex;
+    flex-direction: column;
+    gap:1.5em;
+    padding:3em;
+}
+
+.square__sedan{
+    background-color: var(--orange);
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;;
+}
+
+.square__suv{
+    background: var(--cyan);
+}
+
+.square__luxury{
+    background: var(--dark-cyan);
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+img{
+    width:64px;
+}
+
+h1{
+    color:white;
+    font-family: 'Big Shoulders Display', sans-serif;
+}
+
+p{
+    color:white;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size:15px;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: white;
+    width: fit-content;
+    padding:12px 24px;
+    font-size:15px;
+    border-radius: 36px;
+}
+
+.a__sedan{
+    color:var(--orange);
+}
+
+.a__suv{
+    color: var(--cyan);
+}
+
+.a__luxury{
+    color:var(--dark-cyan);
+}
+
+.igor{
+    margin:1em;
+    color:black;
+}
+
+@media screen and (min-width:1440px) {
+    body{
+        margin:0;
+    }
+
+    .content{
+        flex-direction:row;
+    }
+
+    .square__sedan, .square__suv, .square__luxury{
+        width: 20vw;
+    }
+
+    .square__sedan{
+        border-top-left-radius: 0.6em;
+        border-bottom-left-radius: 0.6em;
+        border-top-right-radius: 0;
+    }
+
+    .square__luxury{
+        border-top-right-radius: 0.6em;
+        border-bottom-right-radius: 0.6em;
+        border-bottom-left-radius: 0;
+    }
+
+    h1{
+        Font-size: 2.5em;
+    }
+
+    a{
+        margin-top:5em;
+        padding: 12px 27px;
+    }
+
+    a:hover{
+        color:white;
+        background: none;
+        outline: 2px solid white;
+        transition-duration: 0.25s;
+    }
+
+}
